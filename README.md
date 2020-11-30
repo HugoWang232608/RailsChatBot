@@ -1,25 +1,22 @@
-<<<<<<< HEAD
-# README
+# 由Rails构建前端交互界面
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+目标：用Rails构建一个与Chatbot交互的网络应用框架，在形式上与聊天室类似
 
-Things you may want to cover:
+实现：
+- 登陆模块
+- 借助聊天室的模式实现聊天界面，借助数据库实现与chatbot的通信
 
-* Ruby version
+测试：
+- 打开网页，进入登陆界面
+- 输入用户名、密码（默认user1，password），点击登陆，进入聊天页面
+- 在聊天界面输入的`double 2`
+- 聊天界面回复`2+2=4`
 
-* System dependencies
+环境
+```
+ruby 2.6.5
+rails 6.0.3.4
+```
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+user@test.com
+qwer12321
