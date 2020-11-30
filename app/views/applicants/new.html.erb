@@ -1,0 +1,27 @@
+<h1>注册</h1>
+ 
+<% if @user.errors.any? %>
+<ul>
+  <% @user.errors.full_messages.each do |message| %>
+  <li><%= message %></li>
+  <% end %>
+</ul>
+<% end %>
+ 
+<%= form_for @user, url: :applicants_create do |f| %>
+  <p>
+    <%= f.label :username %>
+    <%= f.text_field :username %>
+  </p>
+ 
+  <p>
+    <%= f.label :password %>
+    <%= f.password_field :password %>
+  </p>
+ 
+  <p><%= f.button "注册" %></p>
+  
+<% end %>
+
+
+<%= link_to '返回', controller: 'welcome'  , action: 'index'%>

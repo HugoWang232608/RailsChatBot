@@ -1,0 +1,39 @@
+<style>
+    body
+    {background-color:#d0e4fe;}
+    h1
+    {
+        color:black;
+        text-align:center;
+    }
+    h3
+    {
+        text-align: center;
+    }
+    p
+    {
+        text-align: center;
+        font-family:"Times New Roman";
+        font-size:20px;
+    }
+    li
+    {
+        text-align: center;
+    }
+</style>
+
+<h1 >Welcome to the Lita ChatRoom!</h1>
+<p>一个Lita Chatbot应用的测试版本-version 1.0</p>
+
+<h3>目前功能</h3>
+<li>登陆模块，支持注册与登陆的基本功能</li>
+
+<h3>待实现功能</h3>
+<li>聊天界面</li>
+<li>Lita功能的开发与对接</li> 
+<li>界面的美化</li>
+
+<p style='text-align: center;'>
+<%= link_to '注册', controller: 'applicants', action: 'new'%>
+<%= link_to '登陆', controller: 'sessions'  , action: 'new'%>
+</p>

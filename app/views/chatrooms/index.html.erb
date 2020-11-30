@@ -1,0 +1,21 @@
+<h1>Chatrooms#index </h1>
+<p>这里应该是一个chatroom的界面<p>
+
+<p>
+<strong>当前用户:</strong>
+<%= @username %>
+</p>
+
+<h2>展示消息记录:</h2>
+<strong>Chat Log:</strong>
+<% @user.messages.each do |message| %>
+    <p><%= message.created_at%></p>
+    <p>--Command: <%= message.body%> </p>
+    <p>--Reply to (<%= message.body%>)</p>
+<% end%>
+
+<h2>发送信息:</h2>
+<%= render 'messages/create'%>
+
+
+<%= link_to '注销', controller: 'welcome'  , action: 'index'%>
