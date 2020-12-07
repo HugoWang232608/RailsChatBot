@@ -18,6 +18,14 @@ ruby 2.6.5
 rails 6.0.3.4
 ```
 
+## 数据库的设计
+
+## 界面设计与美化
+参考 https://codepen.io/sajadhsm/pen/odaBdd
+1. 利用CSS美化页面
+2. 使用`form_with`方法
+
+
 修改数据库
 user@test.com
 qwer12321
