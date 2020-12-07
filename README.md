@@ -18,5 +18,6 @@ ruby 2.6.5
 rails 6.0.3.4
 ```
 
+修改数据库
 user@test.com
 qwer12321
