@@ -2,8 +2,10 @@
 
 one:
   body: MyString
+  from_bot: false
   user: one
 
 two:
   body: MyString
+  from_bot: false
   user: two
