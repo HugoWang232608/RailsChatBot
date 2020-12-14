@@ -2,10 +2,13 @@ class MessagesController < ApplicationController
     #def new
     #    @message = Message.new
     #end
+    #include Lita    
+ 
 
     def create
-        @user = User.find_by( username: @@current_username)
-        @message = @user.messages.create(message_params)
+        @user = ::User.find_by( username: @@current_username)
+        @message = @user.messages.create( body:message_params[:body], from_bot: false)
+        
         redirect_to  controller:'chatrooms', action:'index'
     end
 
@@ -17,5 +20,4 @@ class MessagesController < ApplicationController
         def message_params
             params.require(:message).permit(:body)
         end
-
 end

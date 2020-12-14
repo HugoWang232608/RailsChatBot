@@ -3,6 +3,17 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.6.5'
 
+# Added for the chatbot
+gem "lita"
+gem "lita-doubler"
+#gem "lita-task-scheduler"
+
+gem "lita-railschatbot"  , path: "./lita-railschatbot"
+
+
+#------------------
+#-----default------
+#------------------
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

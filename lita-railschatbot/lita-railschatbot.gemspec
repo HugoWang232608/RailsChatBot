@@ -1,13 +1,13 @@
 Gem::Specification.new do |spec|
-  spec.name          = "lita-doubler"
+  spec.name          = "lita-railschatbot"
   spec.version       = "0.1.0"
-  spec.authors       = ["wuhao"]
+  spec.authors       = ["EcstasyH"]
   spec.email         = ["wuhao164@mails.ucas.ac.cn"]
-  spec.description   = "double"
-  spec.summary       = "double"
+  spec.description   = "adapter"
+  spec.summary       = "adapter"
   spec.homepage      = "https://github.com/EcstasyH/Lita_Bot/"
   spec.license       = "MIT"
-  spec.metadata      = { "lita_plugin_type" => "handler" }
+  spec.metadata      = { "lita_plugin_type" => "adapter" }
 
   spec.files         = `git ls-files`.split($/)
   spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
@@ -16,7 +16,7 @@ Gem::Specification.new do |spec|
 
   spec.add_runtime_dependency "lita", ">= 4.8"
 
-  spec.add_development_dependency "bundler", "> 1.3"
+  spec.add_development_dependency "bundler", ">= 1.3"
   spec.add_development_dependency "pry-byebug"
   spec.add_development_dependency "rake"
   spec.add_development_dependency "rack-test"
