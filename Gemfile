@@ -3,14 +3,11 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.6.5'
 
-# Added for the chatbot
-#gem "lita"
-#gem "lita-doubler"
-#gem "lita-task-scheduler"
+gem 'faye'
+gem 'thin', require: false
+gem 'sync'
 
-#gem "lita-railschatbot"  , path: "./lita-railschatbot"
-
-
+gem 'bootstrap-sass', '~> 3.3.6'
 #------------------
 #-----default------
 #------------------

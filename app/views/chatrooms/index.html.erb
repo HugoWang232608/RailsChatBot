@@ -10,9 +10,7 @@
 
 <h2>展示消息记录:</h2>
 <strong>Chat Log:</strong>
-<% @user.messages.each do |message| %>
-    <p><%= message.id%>:<%= message.body%>[<%= message.from_bot%>] </p>
-<% end%>
+<%= render 'messages/show'>
 
 <h2>发送信息:</h2>
 <%= render 'messages/create'%>

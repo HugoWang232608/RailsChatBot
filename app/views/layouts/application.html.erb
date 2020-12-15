@@ -1,9 +1,14 @@
 <!DOCTYPE html>
+
+
 <html>
   <head>
     <title>Chatroom</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+
+    <%= include_sync_config %>
+    <%= javascript_include_tag Sync.adapter_javascript_url %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>

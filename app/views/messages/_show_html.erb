@@ -1,5 +1,6 @@
 
 <p>
-<strong>Title:</strong>
-<%= @User.body %>
+<% @user.messages.each do |message| %>
+    <p><%= message.id%>:<%= message.body%>[<%= message.from_bot%>] </p>
+<% end%>
 </p>
