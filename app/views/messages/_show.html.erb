@@ -1,9 +1,61 @@
+<main class="msger-chat">
 
-<p>
+<% i = 0%>
+<% a = Array.new%>
 <% @user.messages.reverse.each do |message| %>
-    <%if message == nil %>
+    <%if message.body == "" %>
         <% next%>
     <%end%>
-    <p><%= message.id%>:<%= message.body%>[<%= message.from_bot%>] </p>
+    <%i=i+1%>
+    <%if i>4%>
+        <%break%>
+    <%end%>
+    <%a << message%>
+<%end%>
+<% a.reverse.each do |message|%>
+    <%if message.from_bot==true%>
+    <div class="msg left-msg">
+        <div
+         class="msg-img"
+         style="background-image: url(https://image.flaticon.com/icons/svg/327/327779.svg)"
+        ></div>
+
+        <div class="msg-bubble">
+          <div class="msg-info">
+            <div class="msg-info-name">BOT</div>
+            <div class="msg-info-time"><%= message.created_at.strftime('%Y-%m-%d %H:%M:%S')%></div>
+          </div>
+          
+          <%str = message.body.delete("\"[]")%>
+          <div class="msg-text">
+            <%=str%>
+          </div>
+        </div>
+    </div>
+    <%else%>
+    <div class="msg right-msg">
+        <div
+         class="msg-img"
+         style="background-image: url(https://image.flaticon.com/icons/svg/145/145867.svg)"
+        ></div>
+      
+        <div class="msg-bubble">
+          <div class="msg-info">
+            <div class="msg-info-name"></div>
+            <div class="msg-info-time"><%= message.created_at.strftime('%Y-%m-%d %H:%M:%S')%></div>
+          </div>
+          
+          <div class="msg-text">
+            <%= message.body%>
+          </div>
+        </div>
+      </div>
+      
+    <%end%>
+
 <% end%>
-</p>
+
+
+
+
+</main>

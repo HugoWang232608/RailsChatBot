@@ -1,10 +1,5 @@
-<%= form_with(model: [ @user, @user.messages.build ], local: true) do |form| %>
-    <p>
-      <%= form.label :body %><br>
-      <%= form.text_area :body %>
-    </p>
-    <p>
-      <%= form.submit %>
-    </p>
-  <% end %>
+<%= form_with(model: [ @user, @user.messages.build ], local: true, class:"msger-inputarea") do |form| %>  
+  <%= form.text_area :body, size: "90x2" %>
+  <%= form.submit "Send"%>
+<% end %>
   

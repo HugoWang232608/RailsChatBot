@@ -1,19 +1,21 @@
-<%= stylesheet_link_tag "chatrooms" %>
-
-<h1>Chatroom </h1>
-<p>这里应该是一个chatroom的界面</p>
-
-<p>
-<strong>当前用户:</strong>
-<%= @username %>
-</p>
-
-
-<h2>发送信息:</h2>
-<%= render 'messages/create'%>
-
-<h2>消息记录:</h2>
-<%= render 'messages/show'  %>
+<section class="msger">
+  <header class="msger-header">
+    <div class="msger-header-title">
+      <i class="fas fa-comment-alt"></i> 
+      <p> RailsChatBot</p>
+      <p><i>Current User</i>: <%=@username%></p>
+    </div>
+    
+    <div class="msger-header-options">
+      <span><i class="fas fa-cog"></i></span>
+      <%= link_to '注销', controller: 'welcome'  , action: 'index'%>
+    </div>
+  </header>
 
 
-<%= link_to '注销', controller: 'welcome'  , action: 'index'%>
+
+  <%= render 'messages/show'  %>
+
+  <%= render 'messages/create'  %>
+
+</section>
