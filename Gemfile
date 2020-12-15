@@ -4,11 +4,11 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '2.6.5'
 
 # Added for the chatbot
-gem "lita"
-gem "lita-doubler"
+#gem "lita"
+#gem "lita-doubler"
 #gem "lita-task-scheduler"
 
-gem "lita-railschatbot"  , path: "./lita-railschatbot"
+#gem "lita-railschatbot"  , path: "./lita-railschatbot"
 
 
 #------------------
