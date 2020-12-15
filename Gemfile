@@ -4,9 +4,9 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '2.6.5'
 
 gem 'faye'
-gem 'thin', require: false
-gem 'sync'
+gem 'render_sync'
 
+gem 'redis'
 gem 'bootstrap-sass', '~> 3.3.6'
 #------------------
 #-----default------

@@ -1,3 +1,10 @@
+# 本地部署
+1. 下载Railschatbot
+2. 下载MyLita，将MyLita移入Railschatbot文件夹中
+3. 在
+4. 在MyLita目录下执行`lita -d`
+5. 在
+
 # 由Rails构建前端交互界面
 
 目标：用Rails构建一个与Chatbot交互的网络应用框架，在形式上与聊天室类似
