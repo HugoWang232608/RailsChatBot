@@ -1,0 +1,9 @@
+
+<p>
+<% @user.messages.reverse.each do |message| %>
+    <%if message == nil %>
+        <% next%>
+    <%end%>
+    <p><%= message.id%>:<%= message.body%>[<%= message.from_bot%>] </p>
+<% end%>
+</p>
